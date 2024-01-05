@@ -35,4 +35,4 @@ jobs:
         with:           
           token: ${{ secrets.GITHUB_TOKEN }}          
           branch: gh-pages          
-          folder: ./dist/browser
+          folder: ./dist/portfolio/browser

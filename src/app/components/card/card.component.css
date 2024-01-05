@@ -1,0 +1,90 @@
+/* contenedor de la card */
+.Container {
+    max-width: 1200px;
+    margin: 0 auto; 
+    display: flex;
+    gap: 1em;   
+    justify-content: space-evenly;
+    align-items: center;
+
+      
+}
+
+.divContainer {   
+    width: 160px;
+    height: 200px;
+    display: flex;   
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    margin-top: 2em;
+    /* border: 1px solid #cfcfcf; */
+    /* border-radius: 1em; */
+
+    /* aca va la imagen de la card */
+    & header {        
+        width: 100%;
+        height: 100%;         
+        /* background: blue; */
+        display: inline-block;        
+        border-top-right-radius: 2em;
+        border-top-left-radius: 2em;
+        border: 1px solid #6c05f38a;
+        border-top: 4px solid #ebebeb; 
+        
+        & section {
+            max-width: 100%;
+            margin: 0;
+
+            /*image de la card */
+            & img{                     
+                width: 100%;
+                position: relative;
+                /* bottom: 0.3em; */
+                left: 35px;
+                top: 1em;               
+                
+            }
+        }
+        
+        
+    }
+    /* nombre de la imagen de la card*/
+    & main {
+        /* background: red; */
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-top-right-radius: 1em;
+        border-top-left-radius: 1em;
+        position: relative;
+        bottom: 1em;
+        color: #fff;
+        /* border: 1px solid #6c05f38a; */
+               
+        & p {
+            text-align: center;         
+        }
+
+
+    }         
+        
+    /* imagend ela sestrellas */
+    & footer {       
+        background: green;
+        width: 100%; 
+        position: relative;
+        bottom: 1em;          
+
+        & p {
+            text-align: center;
+            color: #fff;
+        }
+
+    }
+
+}
+    
+
+

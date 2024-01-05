@@ -1,0 +1,149 @@
+<div class="flex justify-center items-center flex-col bg-gray-900 md:w-3/6 mx-auto rounded-lg p-4 mt-4 sm:max-w-full sm:flex-col sm:p-2 sm:m-2">    
+  <h3 class="flex justify-center mt-4 text-gray-500 text-base sm:p-2 sm:m-2 ">Presiona el botton y conoce mis habilidades en<span  routerLink="/skills-fronted" class=" cursor-pointer uppercase ml-1 bg-cyan-700 text-white rounded-md pl-1 pr-1 hover:text-gray-600">front-end</span></h3>   
+    <div class="flex justify-evenly flex-col items-center flex-wrap mt-2">
+      @if(!isActive){
+        <div>     
+          <button routerLink="/skills-fronted" class=" bg-indigo-700 text-gray-100 border border-gray-300 rounded-sm p-2 m-2 w-28 h-10 flex justify-center items-center flex-col hover:bg-gray-700 hover:text-white cursor-pointer transition duration-600" >Fronted &RightTeeArrow;</button>           
+        </div>
+      }@else {
+        <div>
+          <button [ngClass]="{'active': isActive}"  routerLink="/skills"  class=" bg-white border border-gray-300 rounded-sm p-2 m-2 w-28 h-10 flex justify-center items-center flex-col hover:bg-gray-700 hover:text-white cursor-pointer transition duration-600" >Backend &RightTeeArrow;</button>            
+        </div>
+      }    
+    </div>    
+    <div class="h-auto mt-8 flex justify-center flex-row flex-wrap gap-8">      
+      @defer () {
+        <div class=" p-5 mb-4 border-gray-100 rounded-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
+          <span class="text-lg font-semibold text-gray-900 dark:text-white cursor-pointer hover:text-indigo-700 sm:text-center">Upskilling Java - Spring Boot</span>
+          <ol class="mt-3 divide-y divider-gray-200 dark:divide-gray-700">
+            <li>
+              <a href="https://github.com/marbello1973/Upskilling-Java-pf" class="items-center block p-3 sm:flex hover:bg-gray-100 dark:hover:bg-gray-700 hover:rounded-md" target="_blank">
+                
+                <div class="sm:flex sm:flex-col justify-center items-center ">                        
+                  <svg class=" fill-blue-400 w-20 h-20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.37 17.51c-3.09.86 1.87 2.64 5.8 1a7.18 7.18 0 0 1-1.1-.54 11.59 11.59 0 0 1-4.16.18c-1.31-.15-.54-.64-.54-.64zm5.33-1.68a16.27 16.27 0 0 1-5.36.26c-1.31-.14-.45-.77-.45-.77-3.4 1.12 1.89 2.4 6.64 1a2.25 2.25 0 0 1-.83-.49zm1.82-9.73s-6.87 1.71-3.59 5.49a1.47 1.47 0 0 1-.25 2.12s2.46-1.27 1.33-2.86-1.86-2.22 2.51-4.75z"/><path d="M18.13 19.14s.56.46-.63.82c-2.27.69-9.43.9-11.42 0-.72-.31.62-.74 1-.83a2.54 2.54 0 0 1 .69-.08c-.8-.56-5.15 1.1-2.21 1.58 8.05 1.37 14.64-.56 12.57-1.49zm-2.76-4.88a7 7 0 0 1 .92-.49s-1.51.27-3 .4a28.11 28.11 0 0 1-4.82.05C6.09 13.91 9.74 13 9.74 13a6.81 6.81 0 0 0-3.16.75c-2.06 1.03 5.09 1.48 8.79.51zm.91 2.44a.39.39 0 0 1-.08.09c5-1.32 3.18-4.65.78-3.81a.71.71 0 0 0-.33.25s.14-.05.43-.12c1.22-.25 2.92 1.63-.8 3.59zM12 13c-.74-1.67-3.26-3.14 0-5.71C16.09 4.08 14 2 14 2c.84 3.31-3 4.31-4.34 6.37-.93 1.41.47 2.92 2.34 4.63z"/><path d="M16.41 21.32a29.75 29.75 0 0 1-9.14.14s.46.38 2.84.53c3.61.23 9.15-.12 9.29-1.83 0 0-.26.64-2.99 1.16z"/></svg>
+                </div>
+                    
+                <div class="text-gray-600 dark:text-gray-400 sm:text-justify">
+                  <div class="text-base font-normal">
+                    <span class="font-medium text-gray-900 dark:text-white">Upskilling </span> Henry students <span class="font-medium text-gray-900 dark:text-white"> Seguimiento - Gastos</span> despliege en github <span class="font-medium text-gray-900 dark:text-white">  Desarrolle mis habilidades programando una API-REST para dar seguimiento a gastos usando Spring Boot
+                      <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M58.2 3.365a29.503 29.503 0 0 1-3.419 6.064A32.094 32.094 0 1 0 9.965 55.372l1.186 1.047a32.08 32.08 0 0 0 52.67-22.253c.875-8.17-1.524-18.51-5.62-30.8zM14.53 55.558a2.744 2.744 0 1 1-.404-3.857 2.744 2.744 0 0 1 .404 3.857zm43.538-9.61c-7.92 10.55-24.83 6.99-35.672 7.502 0 0-1.922.113-3.857.43 0 0 .73-.31 1.663-.663 7.614-2.65 11.213-3.16 15.838-5.54 8.708-4.427 17.322-14.122 19.112-24.2-3.313 9.695-13.373 18.032-22.53 21.418-6.276 2.313-17.614 4.566-17.614 4.566l-.457-.245c-7.714-3.75-7.952-20.457 6.077-25.845 6.143-2.366 12.02-1.067 18.654-2.65 7.084-1.683 15.28-6.99 18.615-13.916 3.73 11.08 8.224 28.422.166 39.15z" fill="#68bd45"/></svg> &RightTeeArrow;
+                    </span>
+                    <span class="font-medium text-gray-900 dark:text-white">H2
+                      <svg class="fill-blue-400" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M480-120q-151 0-255.5-46.5T120-280v-400q0-66 105.5-113T480-840q149 0 254.5 47T840-680v400q0 67-104.5 113.5T480-120Zm0-479q89 0 179-25.5T760-679q-11-29-100.5-55T480-760q-91 0-178.5 25.5T200-679q14 30 101.5 55T480-599Zm0 199q42 0 81-4t74.5-11.5q35.5-7.5 67-18.5t57.5-25v-120q-26 14-57.5 25t-67 18.5Q600-528 561-524t-81 4q-42 0-82-4t-75.5-11.5Q287-543 256-554t-56-25v120q25 14 56 25t66.5 18.5Q358-408 398-404t82 4Zm0 200q46 0 93.5-7t87.5-18.5q40-11.5 67-26t32-29.5v-98q-26 14-57.5 25t-67 18.5Q600-328 561-324t-81 4q-42 0-82-4t-75.5-11.5Q287-343 256-354t-56-25v99q5 15 31.5 29t66.5 25.5q40 11.5 88 18.5t94 7Z"/></svg>&RightTeeArrow;
+                    </span>
+                    
+
+                  </div>                   
+                  <span class="inline-flex items-center text-xs font-normal text-gray-500 dark:text-gray-400">
+                    <svg class="w-2.5 h-2.5 me-1 fill-sky-100" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 .5a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19ZM8.374 17.4a7.6 7.6 0 0 1-5.9-7.4c0-.83.137-1.655.406-2.441l.239.019a3.887 3.887 0 0 1 2.082 2.5 4.1 4.1 0 0 0 2.441 2.8c1.148.522 1.389 2.007.732 4.522Zm3.6-8.829a.997.997 0 0 0-.027-.225 5.456 5.456 0 0 0-2.811-3.662c-.832-.527-1.347-.854-1.486-1.89a7.584 7.584 0 0 1 8.364 2.47c-1.387.208-2.14 2.237-2.14 3.307a1.187 1.187 0 0 1-1.9 0Zm1.626 8.053-.671-2.013a1.9 1.9 0 0 1 1.771-1.757l2.032.619a7.553 7.553 0 0 1-3.132 3.151Z"/>
+                    </svg>
+                      GitHub Public
+                  </span> 
+                </div>
+              </a>
+            </li>        
+          </ol>
+        </div>                
+      }@loading(minimum 2s){      
+      <span>          
+        <img src="assets/svg-loaders/rings.svg" alt="oval" class=" bg-slate-800 rounded-full">
+      </span>
+    }               
+    </div>
+</div> 
+
+
+
+
+
+
+
+
+
+<!--
+  <div class="Container">    
+    <h3 class="title">Presiona el botton y conoce mis habilidades en BACK-END</h3>   
+      <div class="menu">
+        @if(!isActive){
+          <div>     
+            <button routerLink="/skills" class="backend" >Backend &RightTeeArrow;</button>      
+            <h2>Front-end</h2>
+          </div>
+        }@else {
+          <div>
+            <button [ngClass]="{'active': isActive}"  routerLink="/skills-fronted"  class="fronted" >Frontend &RightTeeArrow;</button>
+            <h2>Back-end</h2>
+          </div>
+        }    
+      </div>    
+    <div class="divPrincipal">   
+      @for (item of dataFront; track $index) {   
+        @defer () {
+          <mat-card class="example-card">
+            <mat-card-header>          
+              <mat-card-title>{{item.name}}</mat-card-title>         
+            </mat-card-header>
+            <mat-card-content>             
+              <img class="imagen" [src]="item.image" [alt]="'imagen'" width="140" height="140"  />           
+            </mat-card-content>
+            <mat-card-footer>{{item.description}}</mat-card-footer>
+          </mat-card>         
+      }@loading(minimum 2s){      
+        <span>          
+          <img src="assets/svg-loaders/rings.svg" alt="oval" class=" bg-slate-800 rounded-full">
+        </span>
+      }
+    }            
+    </div>
+</div> 
+  
+
+ -->
+
+
+
+
+
+<!-- <div class="Container">
+  <h3 class="title">Presiona el botton y conoce mis habilidades en FRONT-END</h3>
+  <div class="menu">
+    @if(isActive){
+    <div>     
+      <button [ngClass]="{'active': isActive}" class="backend" >Backend &RightTeeArrow;</button>      
+      <h2>Front-end</h2>
+    </div>
+    }@else {
+      <div>
+        <button routerLink="/skills-fronted"  class="fronted" >Frontend &RightTeeArrow;</button>
+        <h2>Back-end</h2>
+      </div>
+    }    
+  </div>    
+  <div class="divPrincipal">   
+    @for (item of data; track $index) { 
+      @defer () {
+        <mat-card class="example-card">
+          <mat-card-header>          
+            <mat-card-title>{{item.name}}</mat-card-title>         
+          </mat-card-header>
+          <mat-card-content>
+            <img class="imagen" [src]="item.image" [alt]="'imagen'" width="140" height="140" >            
+          </mat-card-content>
+          <mat-card-footer>{{item.description}}</mat-card-footer>
+        </mat-card> 
+      }@loading (minimum 2s) {
+        <img src="assets/svg-loaders/rings.svg" alt="oval" class=" bg-slate-800 rounded-full">
+      }                 
+    }
+  </div>
+</div> -->
+
+
+
+
+
+
+
+  
+

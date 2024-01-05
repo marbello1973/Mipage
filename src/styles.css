@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'tailwindcss/components';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+     
+}
+
+
+:root{
+    --background-body: linear-gradient(225deg, #ff3cac 0%, #784ba0 50%, #2b86c5 100%);
+}
+/* html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
+

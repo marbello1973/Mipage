@@ -4,7 +4,13 @@
 
     <div class="sm:mb-8 sm:flex sm:justify-center"> 
       <div class="flex flex-col items-center pb-10">
-        <img class=" rounded-full w-24 h-auto sm:w-48 sm:h-auto md:w-96 md:h-auto" src="../../../assets/david.png" alt="David "/>
+        @defer () {
+          <img class=" rounded-full w-24 h-auto sm:w-48 sm:h-auto md:w-96 md:h-auto" src="../../../assets/david.png" alt="David "/>
+        }@loading(minimum 2s){      
+          <span>          
+            <img src="assets/svg-loaders/rings.svg" alt="oval" class=" bg-slate-800 rounded-full">            
+          </span>
+        }
         <h5 class="mb-1 text-xs font-medium text-gray-900 dark:text-white font-ExpetusSans">David</h5>
         <span class="text-lg text-blue-600 dark:text-blue-400 font-bold">Desarrollador & Programador</span>        
         <span class="p-1">Acerca de mi en.</span><a href="https://github.com/marbello1973" target="_blank" class="text-blue-500 p-1">GitHub<span aria-hidden="true"> &rarr;</span></a>                     

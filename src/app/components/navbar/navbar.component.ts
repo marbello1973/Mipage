@@ -16,13 +16,18 @@ export class NavbarComponent  {
   public isMenuOpen = false;
 
   menuItem(): void{
-    this.isMenuOpen = !this.isMenuOpen;
-    console.log('Hola')
+    this.isMenuOpen = !this.isMenuOpen;   
      
   }
 
-  constructor (){
-    //console.log(this.isMenuOpen)
+  constructor (){}
+
+  public scrollTo(sectionId: string) {
+    const element = document.getElementById(sectionId);
+    if(element){
+      element.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+      this.isMenuOpen = false;
+    }
   }
 
   public menuRoutes = routes.map((route) => route)

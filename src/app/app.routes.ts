@@ -14,6 +14,6 @@ export const routes: Routes = [
     { path: 'contacto', component: ContactComponent},    
     { path: 'skills', component: SkillComponent},
     { path: 'skills-fronted', component: SkillFrontedComponent},
-    { path: '**', redirectTo: '/home', pathMatch: 'full' }    
+    { path: '**', redirectTo: '/inicio', pathMatch: 'full' }    
     
 ];

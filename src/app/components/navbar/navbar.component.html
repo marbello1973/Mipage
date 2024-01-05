@@ -41,7 +41,7 @@
           @for (menu of menuRoutes; track $index) {
             @if(menu.path !== undefined){
               <div class="p-2 m-2">        
-                <a [routerLink]="menu.path" routerLinkActive="bg-indigo-600" class="p-2 m-2 gap-4 text-white font-ExpetusSans rounded-sm text-sm uppercase ">{{menu.path}}</a>
+                <a #sectionId (click)="scrollTo(menu.path)" [routerLink]="menu.path" routerLinkActive="bg-indigo-600" class="p-2 m-2 gap-4 text-white font-ExpetusSans rounded-sm text-sm uppercase ">{{menu.path}}</a>
               </div>
             }
           } 

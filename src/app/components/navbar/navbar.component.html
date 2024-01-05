@@ -11,7 +11,7 @@
       @for (menu of menuRoutes; track $index) {
         @if(menu.path !== undefined){
           <div class="md:block hidden ">        
-            <a [routerLink]="menu.path" routerLinkActive="bg-indigo-600" class="p-2 no-underline text-white rounded-sm text-sm uppercase">{{menu.path}}</a>
+            <a [routerLink]="menu.path" routerLinkActive="bg-indigo-600" class="p-2 no-underline text-white rounded-sm text-xs uppercase font-ExpetusSans">{{menu.path}}</a>
           </div>
         }
       } 
@@ -41,7 +41,7 @@
           @for (menu of menuRoutes; track $index) {
             @if(menu.path !== undefined){
               <div class="p-2 m-2">        
-                <a #sectionId (click)="scrollTo(menu.path)" [routerLink]="menu.path" routerLinkActive="bg-indigo-600" class="p-2 m-2 gap-4 text-white font-ExpetusSans rounded-sm text-sm uppercase ">{{menu.path}}</a>
+                <a #sectionId (click)="scrollTo(menu.path)" [routerLink]="menu.path" routerLinkActive="bg-indigo-600" class="p-2 m-2 no-underline gap-4 text-white font-ExpetusSans rounded-sm text-xs uppercase ">{{menu.path}}</a>
               </div>
             }
           } 

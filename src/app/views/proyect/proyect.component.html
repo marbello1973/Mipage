@@ -1,4 +1,7 @@
-
-<div>
-  <app-scroll></app-scroll>   
+<div class=" flex items-center justify-center ">
+  @defer () {
+    <app-scroll></app-scroll> 
+  } @loading(minimum 3s) {              
+    <img src="assets/loader.svg" alt="Loading...!" class="bg-slate-500 rounded-full ">               
+  }
 </div>

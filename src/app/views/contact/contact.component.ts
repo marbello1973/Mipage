@@ -21,6 +21,7 @@ import { CardComponent } from '../../components/card/card.component';
 export class ContactComponent {
 
   public myState: string = "on";
+  public email: string = 'david.marbello@outlook.com'
 
   ngOnInit(): void {
     setTimeout(() => {

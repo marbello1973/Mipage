@@ -5,9 +5,13 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:prod":" ng build --configuration production --base-href /MiPortfolio/" ,
     "watch": "ng build --watch --configuration development",
-    "test": "jest",
-    "test:watch": "jest --watchAll"
+    "test": "jest",    
+    "test:watch": "jest --watchAll",
+    "deploy": "npm run build",
+    "serve:ssr:portfolio": "node dist/portfolio/server/server.mjs"
+
   },
   "private": true,
   "dependencies": {

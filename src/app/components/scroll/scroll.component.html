@@ -6,16 +6,16 @@
     <section [@myAnimacion]="myState">      
       <div class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-6xl">
         <div class="md:flex">
-          <div class="md:shrink-0">
-            @defer () {
-              <img class="h-60 w-full object-cover md:h-full md:w-96" [src]="projectDataService[currentProject].imagen" alt="Modern building architecture">
-            }@loading(minimum 2s) {
-              <img src="assets/loader.svg" alt="Loading...!" class="bg-slate-500 rounded-full"> 
+          <div class="flex items-center md:shrink-0 ">
+              @defer () {
+              <img class="h-60 w-full object-cover md:h-full md:w-96" [src]="projectDataService[currentProject].imagen"  alt="Modern building architecture">
+            }@loading(minimum 3s) {              
+              <img src="assets/loader.svg" alt="Loading...!" class="bg-slate-500 rounded-full ">               
             }
           </div>
           <div class="p-8">
             <div class="uppercase tracking-wide text-md text-indigo-500 font-semibold">
-              <a [href]="projectDataService[currentProject].url">
+              <a [href]="projectDataService[currentProject].url" target="_blank">
                 {{projectDataService[currentProject].name}}
               </a> 
             </div>
@@ -39,4 +39,4 @@
 
 </div>    
   
- <!-- <a [href]="projectDataService[currentProject].url" class="block mt-1 text-lg leading-tight font-medium text-black hover:underline">{{projectDataService[currentProject].name}}</a> -->
+ 

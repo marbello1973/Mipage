@@ -10,7 +10,7 @@
     <div class="flex flex-row items-center gap-4">
       @for (menu of menuRoutes; track $index) {
         @if(menu.path !== undefined){
-          <div class="md:block hidden ">        
+          <div class="md:block hidden font-ExpetusSans ">        
             <a [routerLink]="menu.path" routerLinkActive="bg-indigo-600" class="p-2 no-underline text-white rounded-sm text-sm uppercase">{{menu.path}}</a>
           </div>
         }
@@ -40,8 +40,8 @@
         <div class="md:hidden">
           @for (menu of menuRoutes; track $index) {
             @if(menu.path !== undefined){
-              <div class="p-2 m-2">        
-                <a [routerLink]="menu.path" routerLinkActive="bg-indigo-600" class="p-2 m-2 gap-4 text-white font-ExpetusSans rounded-sm text-sm uppercase ">{{menu.path}}</a>
+              <div class="p-2 m-2 font-ExpetusSans">        
+                <a [routerLink]="menu.path" routerLinkActive="bg-indigo-600" class="p-2 m-2 gap-4 text-white rounded-sm text-sm uppercase ">{{menu.path}}</a>
               </div>
             }
           } 

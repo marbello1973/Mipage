@@ -1,5 +1,5 @@
 {
-  "name": "mipage",
+  "name": "portfolio",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -10,7 +10,7 @@
     "test": "jest",    
     "test:watch": "jest --watchAll",
     "deploy": "npm run build",
-    "serve:ssr:portfolio": "node dist/mipage/server/server.mjs"
+    "serve:ssr:portfolio": "node dist/portfolio/server/server.mjs"
 
   },
   "private": true,

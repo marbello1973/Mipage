@@ -4,6 +4,7 @@ import { Component} from '@angular/core';
 import { DataService } from '../../service/data.service';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 
+
 @Component({
   selector: 'app-scroll',
   standalone: true,
@@ -26,16 +27,29 @@ export class ScrollComponent  {
     name: string, 
     imagen: string, 
     url: string, 
+    title: string,
+    subtitle:{[key:string]: string}[],   
     description: string, 
     tecnologies: string[]}[] = this.proyectService.getDataProject();
 
-  currentProject: number = 0;
-  finalPosition: string | number = 0;
+  public currentProject: number = 0;
+  public finalPosition: string | number = 0;
+  
+
 
   constructor(private proyectService: DataService){
-    this.projectDataService = this.proyectService.getDataProject()
-  }
+    this.projectDataService = this.proyectService.getDataProject()   
+   
+    
+  } 
+ 
+  
+  public algorithms: string[] = this.projectDataService.flatMap((project) => project.subtitle.map((item) => item['algoritmos'] ? item['algoritmos'] : '')).filter((item) => item !== '')
+  public resources: string[] = this.projectDataService.flatMap((project) => project.subtitle.map((item) => item['recursos'] ? item['recursos'] : '')).filter((item) => item !== '')
+  public streaming: string[] = this.projectDataService.flatMap((project) => project.subtitle.map((item) => item['streaming'] ? item['streaming'] : '')).filter((item) => item !== '')
+  public cuestionarios: string[] = this.projectDataService.flatMap((project) => project.subtitle.map((item) => item['cuestionarios'] ? item['cuestionarios'] : '')).filter((item) => item !== '')
 
+  
   public myState: string = "on";
 
   ngOnInit(): void {

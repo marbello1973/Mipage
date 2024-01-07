@@ -1,6 +1,6 @@
-import { Component, ElementRef, Renderer2 } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterLink, RouterLinkActive, RouterOutlet, Router, NavigationEnd} from '@angular/router';
+import { RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router';
 import { routes } from '../../app.routes'
 
 @Component({

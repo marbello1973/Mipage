@@ -28,9 +28,9 @@ export class NavbarComponent  {
     }
   }
 
-  @HostListener('window:scroll', ['$event'])
+  @HostListener('window: scroll', ['$event'])
   onClick(event: Event): void {
-    this.closeMenu();
+    this.closeMenu();    
   }
  
 

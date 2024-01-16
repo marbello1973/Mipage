@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router';
 import { routes } from '../../app.routes'
@@ -13,14 +13,27 @@ import { routes } from '../../app.routes'
 
 export class NavbarComponent  {
 
-  public isMenuOpen = false;
+  public isMenuOpen = false; 
+  
+  constructor ( ){ }
 
-  menuItem(): void{
-    this.isMenuOpen = !this.isMenuOpen;   
-     
+  
+  menuItem(): void{    
+    this.isMenuOpen = !this.isMenuOpen;      
   }
 
-  constructor (){}
+  closeMenu(): void{
+    if(this.isMenuOpen){
+      this.isMenuOpen = false;
+    }
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  onClick(event: Event): void {
+    this.closeMenu();
+  }
+ 
+
 
   public scrollTo(sectionId: string) {
     const element = document.getElementById(sectionId);
